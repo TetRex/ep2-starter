@@ -19,8 +19,13 @@ The board that ships in this repo is **Session 1's blink + hello**. Flash it
 first to prove your whole toolchain works.
 
 > **The LED:** this board has no simple on/off LED — it has one addressable RGB
-> LED on **GPIO48**. The blink uses it, but the real proof is the **serial
-> "hello"**, which always works.
+> LED on **GPIO38** (check the silkscreen: ours reads `RGB@IO38`). The blink
+> uses it, but the real proof is the **serial "hello"**, which always works.
+
+> **GPIO2 is a test signal, not a mistake.** `setup()` starts a 1 kHz square
+> wave on GPIO2 and leaves it running. It's there for the oscilloscope block in
+> session 1 — probe it and you'll find a wave in seconds. The LED pin carries
+> pulses for only ~30 µs at a time, which is a much harder first capture.
 
 ---
 
