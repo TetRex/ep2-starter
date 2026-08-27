@@ -43,6 +43,19 @@
 > 3–4 sentences. The honest part. What fought you, what you'd change with
 > another week, what you'd do differently from the start.
 
+## Who did what
+
+> One line per person, agreed by the whole team. Not percentages — a plain
+> sentence each, naming what that person actually did.
+>
+> *Example: "Anna — sensor wiring, the recording sessions, threshold experiments.
+> Ben — Edge Impulse training, the deployment build, the demo script."*
+>
+> Everyone's name appears, and everyone sees it before it is handed in.
+
+- **Name:** …
+- **Name:** …
+
 ## AI use
 
 > Required. A few sentences: what you used it for, and where. Reporting never
