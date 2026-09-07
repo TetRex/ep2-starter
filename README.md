@@ -52,6 +52,7 @@ out of the build until you copy one in.
 ## Session by session
 
 - **Session 1 — first flash:** flash `src/main.cpp` as-is (blink + hello).
+  - Homework on real hardware? Copy `examples/session01_plain_led.cpp` → `src/main.cpp` and wire a plain LED on **GPIO40** (long leg → 220–330 Ω resistor → GPIO40, short leg → GND). Session 2 reuses the same pin.
 - **Session 2 — sensor + data:**
   - Wire the MPU-6050: **3V3 → VCC, GND → GND, GPIO8 → SDA, GPIO9 → SCL** *(power off while wiring)*.
   - Copy `examples/session02_i2c_scanner.cpp` → `src/main.cpp`, flash → find `0x68`.

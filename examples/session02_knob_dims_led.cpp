@@ -12,11 +12,14 @@
  *   pot outer leg 2 -> GND
  *   pot middle leg  -> GPIO4
  *
- *   GPIO5 -> resistor (220-330 ohm) -> LED long leg (anode)
+ *   GPIO40 -> resistor (220-330 ohm) -> LED long leg (anode)
  *   LED short leg (cathode) -> GND
  *
  *   THE RESISTOR IS NOT OPTIONAL. An LED straight across a pin draws more
  *   current than the pin should give and can damage it. Long leg = positive.
+ *
+ * Same LED pin as session 1's plain-LED blink, so if you wired one then, it is
+ * already in the right place — you are only adding the potentiometer.
  *
  * NOT the on-board RGB LED, and not LED_BUILTIN. Use the plain LED from your
  * box on a plain GPIO. (LED_BUILTIN assumes GPIO48 and is wrong for our board;
@@ -40,7 +43,7 @@
 #include <Arduino.h>
 
 #define POT_PIN 4
-#define LED_PIN 5
+#define LED_PIN 40
 
 void setup() {
   Serial.begin(115200);
