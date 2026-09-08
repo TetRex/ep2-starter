@@ -94,3 +94,5 @@ out of the build until you copy one in.
   This has already caught us once. The file is commented; read it, don't prune it.
 - **Can't upload / can't dump flash?** Hold **BOOT**, tap **RESET**, release,
   then retry — that forces download mode.
+
+`platformio.ini` tells PlatformIO which board and framework to use, how to configure the board's memory and USB, which libraries to install, and how fast the serial monitor should run.
