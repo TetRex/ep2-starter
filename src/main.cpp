@@ -23,6 +23,7 @@
 
 #define RGB_LED_PIN 38   // silkscreen: RGB@IO38
 #define SCOPE_PIN    2   // J3 pin 5, four pins down from GND — probe this one
+#define RED_PIN 38
 
 void setup() {
   Serial.begin(115200);
@@ -47,13 +48,16 @@ void setup() {
   ledcAttachPin(SCOPE_PIN, 0);
   ledcWrite(0, 512);             // 512 / 1023 = 50 % duty -> a square wave
   Serial.println("Scope test signal: 1 kHz square wave on GPIO2");
+  pinMode(RGB_LED_PIN, OUTPUT);  // the WS2812 is a digital output, not a PWM
 }
 
 void loop() {
+  digitalWrite(RGB_LED_PIN, HIGH);  // this is a no-op for the WS2812, but it makes the IDE happy
   neopixelWrite(RGB_LED_PIN, 0, 24, 0);       // dim green (r, g, b)
   Serial.println("blink: on");
   delay(500);
 
+  digitalWrite(RGB_LED_PIN, LOW);   // this is a no-op for the WS2812, but it makes the IDE happy
   neopixelWrite(RGB_LED_PIN, 0, 0, 0);        // off
   Serial.println("blink: off");
   delay(500);
