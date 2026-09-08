@@ -54,6 +54,7 @@ void setup() {
 void loop() {
   digitalWrite(RGB_LED_PIN, HIGH);  // this is a no-op for the WS2812, but it makes the IDE happy
   neopixelWrite(RGB_LED_PIN, 0, 24, 0);       // dim green (r, g, b)
+  neopixelWrite(RGB_LED_PIN, 24, 0, 0);          // bright red (r, g, b)
   Serial.println("blink: on");
   delay(500);
 
